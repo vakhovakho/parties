@@ -1,0 +1,9 @@
+.election {
+    width: 600px;
+    margin: 0 auto;   
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+}
+
