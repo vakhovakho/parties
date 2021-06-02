@@ -14,11 +14,11 @@ function PartyBar({party, maxVotes, sumOfVotes}) {
         backgroundColor: party.color
     }
     return (
-        <div className="party-bar" style={{borderColor: party.color, top: (party.position - 1) * 70}}>
+        <div className="party-bar" style={{borderColor: party.color, top: (party.position - 1) * 70, zIndex: 10 - party.position}}>
             <div className="votes-bar" style={styles}>
             </div>
             <div className="votes">
-                {maxVotes > 0 ? (party.votes / sumOfVotes * 100).toFixed(1) : 0}%
+                {maxVotes > 0 ? (party.votes / sumOfVotes * 100).toFixed(1) : 0}% ({party.votes})
             </div>
         </div>
     );
